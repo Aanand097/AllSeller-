@@ -7,9 +7,9 @@
 # We leave `publish` unset so Netlify auto-detects the static output.
 # Nitro generates its own _redirects that routes unmatched paths to
 # the SSR function, handling /login, /admin, /dashboard, /products/* etc.
-
 [build]
   command = "npm run build"
+  publish = ".netlify/static"
 
 [build.environment]
   NITRO_PRESET = "netlify"
