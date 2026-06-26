@@ -8,8 +8,7 @@
 # Nitro generates its own _redirects that routes unmatched paths to
 # the SSR function, handling /login, /admin, /dashboard, /products/* etc.
 [build]
-  command = "npm run build"
-  publish = ".netlify/static"
+  command = "npm run build && echo '=== OUTPUT ===' && find . -maxdepth 4 -type d | grep -v node_modules | grep -v .git"
 
 [build.environment]
   NITRO_PRESET = "netlify"
